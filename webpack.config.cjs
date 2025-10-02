@@ -27,7 +27,7 @@ module.exports = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        // This will copy the file from `src/data.csv` to `dist/data.csv`
+        // This will copy the files from `src/resources/` to `dist/resources`
         { from: 'resources/*', to: '.' },
       ],
     }),
