@@ -46,7 +46,6 @@ export function callUsernamePassword(username, password) {
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
   }
   const res = http.post(LOGIN_URL, body, {headers} )
-  console.log("\n\ncoockieess" ,res.cookies )
   return res.cookies
 }
 

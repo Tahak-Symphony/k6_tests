@@ -2,7 +2,6 @@
   "name": "perf_tests",
   "version": "1.0.0",
   "description": "",
-  "main": "connection_test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -17,6 +16,7 @@
     "@types/k6": "^1.2.0",
     "babel-loader": "^10.0.0",
     "buffer": "^6.0.3",
+    "copy-webpack-plugin": "^13.0.1",
     "core-js": "^3.45.1",
     "glob": "^11.0.3",
     "stream-browserify": "^3.0.0",

@@ -2,6 +2,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const glob = require('glob');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 require('dotenv').config({ path: './.env' });
 
 
@@ -24,6 +25,12 @@ module.exports = {
     clean: true,
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        // This will copy the file from `src/data.csv` to `dist/data.csv`
+        { from: 'resources/*', to: '.' },
+      ],
+    }),
     new webpack.DefinePlugin({
       "process.env": JSON.stringify(process.env),
     }),
